@@ -1,0 +1,90 @@
+---yet to be filled later ----
+
+
+
+
+
+
+
+
+
+
+
+Binary Number Representation
+  Java uses two's complement to represent integer
+  to change the sign of integer flip all bits and add 1 which is 2 complemnt basically
+  b = ~a --> bitwise complement 
+  a&b
+  a|b
+  a^b
+  a<<x  x--> how many you want yo shift and new ppositions will be filled with 0
+  a>>x signed right shift, new positions fills with either 1 or 0 based on the sign 
+  a>>>x unsigned right shift, fills with 0 only
+
+
+
+Operators
+  = to assign
+  == 
+  !=
+  >,<,<=,>=
+  !
+  &&
+  ||
+  ^
+  (| or ||)  If we are able to determine the over all result based on the fisrt condition then no need to check the second comdition 
+  In this case we need to use ||   Example (1>0 || 5>0)  if we use just | both have to be evaluated ---> just for performance
+  But it makes difference if arthematic operations comes into picture in conditions
+  
+
+if/else/else if (condition) { }
+int c = (1>0) ? 2 : (5<2) ? 3 : 0;
+
+switch (status) {
+  case "S" :
+    do someting
+  case "D" :
+    do someting
+    break
+  default :
+    do someting
+}     
+It will continue from the the case match until break happpens
+
+
+double price = switch (status) {
+  case "S", "N" -> cost += 1;      --> result is assigned to price
+    case "C"  -> 0;                --> o is assigned to price
+    case "D" -> {do semthing ..    --> yeild keyword must be used in case of block and discount is assigned to price
+      yeild discount;
+    }
+    default -> 3;                  --> defautt must be there in case of assignment
+};
+
+
+: --> old syntax
+-> --> new syntax 
+
+In case of using switch as flow
+  :  --> need to have break or else if will fall to next case
+  ->  --> it wont fall into nect case
+
+In case of using switch as assignment
+  :  --> yeild is must to assign or else jumps to next case  like switch flow, if no yeilds are there then it will throw exception
+  as there was no assignment made. Must not use break beacuse yeild will work like break after assignment wont jump to next case and also if
+  we use break no assignment would happen which is wrong. 
+  ->  --> assignemnt can be done through simple expression and no fallign to next case. Yeild is must in case of block statements. Must not use break
+
+  
+
+
+    
+
+  
+
+  
+  
+  
+  
+  
+  
