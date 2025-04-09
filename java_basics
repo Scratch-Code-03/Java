@@ -35,6 +35,7 @@ Operators
   (| or ||)  If we are able to determine the over all result based on the fisrt condition then no need to check the second comdition 
   In this case we need to use ||   Example (1>0 || 5>0)  if we use just | both have to be evaluated ---> just for performance
   But it makes difference if arthematic operations comes into picture in conditions
+Arthematic operations goes from left to right
   
 
 if/else/else if (condition) { }
@@ -75,12 +76,35 @@ In case of using switch as assignment
   we use break no assignment would happen which is wrong. 
   ->  --> assignemnt can be done through simple expression and no fallign to next case. Yeild is must in case of block statements. Must not use break
 
-  
 
 
-    
+Strings
+If multiple variables have same value then they refer to same memeory but if you want to allocate a new memory
+you need to use new String("hello")
+if there are multiple memories are allcated to same string and you want to assign to shared memeory then "hello".intern()
+When we modify any String variable it creates a new memory rather than modifing the existing memory
 
-  
+
+
+a.substring(0,5)  5th in not included, if not possible then -1
+a.index('p',5)  it starts to look from a[5]
+a.lastIndexof('a')
+a.charAt(1)
+a.length()
+
+
+StringBuilder a = new StringBuilder()  its a mutable string, consider it as list of chars
+
+String a =  """
+          Hi\s 
+              This is Digvijay \""" 
+              how\
+              are you
+      """;
+Except the String line it checks the left indentation, which ever has the least that is set to reference and
+the gap after reference is considered as spaces. Main advantage is we can write test without worring about excape
+charecters but still are used for few cases.
+
 
   
   
